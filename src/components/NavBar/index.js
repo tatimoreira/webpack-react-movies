@@ -5,54 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles } from '@material-ui/styles';
+import {useStyles} from './style';
 
-/*const styles = {
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-    divider: {
-        borderRight: '0.02em solid #393A48',
-        padding: '1.9em'
-    },
-    signIn_button: {
-        borderRadius: '16px',
-        color: '#2E74C4'
-    },
-    navBar: {
-
-    }
-};*/
-
-const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-    divider: {
-        borderRight: '0.02em solid #393A48',
-        padding: '1.9em'
-    },
-    signIn_button: {
-        borderRadius: '16px',
-        color: '#2E74C4'
-    }
-  });
-
-const MovieAppBar = (props) => {
+function MovieAppBar () {
     
     const classes  = useStyles();
     return (
@@ -62,7 +17,6 @@ const MovieAppBar = (props) => {
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                         <MenuIcon />
                     </IconButton>
-                    
                     <Typography variant="h6" color="inherit" className={classes.grow}></Typography>
                     <Button >Top rated</Button>
                     <Button color="inherit">Movies</Button>
@@ -77,4 +31,4 @@ const MovieAppBar = (props) => {
     );
 }
 
-export default (MovieAppBar);
+export default MovieAppBar;

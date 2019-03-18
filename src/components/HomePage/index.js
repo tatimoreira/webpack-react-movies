@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import NavBar from '../NavBar';
-//import CustomCard from 
+import CustomCard from '../CustomCard';
+import Grid from '@material-ui/core/Grid';
+import { useStyles } from './style';
 
 function HomePage() {
-
+	const classes = useStyles();
 	/*const [data, setData] = useState({ topRatedMovies: [] });
 	let topRated = data.topRatedMovies.filter(function (movie) {
 		return movie.poster.path != null;
@@ -14,8 +16,9 @@ function HomePage() {
 	})*/
 
 	return (
-		<div>
+		<div className={classes.body}>
 			<NavBar></NavBar>
+			<CustomCard></CustomCard>
 		</div>
 	)
 }
