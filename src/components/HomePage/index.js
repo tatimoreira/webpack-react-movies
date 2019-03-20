@@ -29,18 +29,20 @@ function HomePage() {
 	return (
 		<div className={classes.body}>
 			<NavBar></NavBar>
-			<p>Top Rated</p>
-			<Container fluid={false}>
-				<Row style={style}>
-					{datos &&
-						datos.map(movie => (
-							<Col xs={6} sm={4} md={3} key={movie.id} >
-								<CustomCard title={movie.original_title} overview={movie.overview} vote_average={movie.vote_average}
-									release_date={movie.release_date} poster_path={movie.poster_path}></CustomCard>
-							</Col>
-						))}
-				</Row>
-			</Container>
+			<div className={classes.container}>
+				<p className={classes.title}>Top Rated Movies</p>
+				<Container fluid={false}>
+					<Row style={style}>
+						{datos &&
+							datos.map(movie => (
+								<Col xs={6} sm={4} md={3} key={movie.id} >
+									<CustomCard title={movie.original_title} overview={movie.overview} vote_average={movie.vote_average}
+										release_date={movie.release_date} poster_path={movie.poster_path}></CustomCard>
+								</Col>
+							))}
+					</Row>
+				</Container>
+			</div>
 		</div>
 	)
 }
