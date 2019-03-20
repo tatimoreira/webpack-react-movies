@@ -15,7 +15,6 @@ function CustomCard() {
 
     return (
         <>
-            <p>Test</p>
             <div className={classes.wrapperCard}>
                 <div className={classes.card__img}>
                     <img src="https://imagenmix.net/wp-content/uploads/2016/10/frases-cortas.jpg" height="260" width="173" />
