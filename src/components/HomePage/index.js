@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../NavBar';
 import CustomCard from '../CustomCard';
 import { useStyles } from './style';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function HomePage() {
 
@@ -13,21 +14,33 @@ function HomePage() {
 		const response = await fetch(url);
 		const data = await response.json();
 		const item = data.results;
+		debugger
 		setData(item);
 	}
 
 	useEffect(() => {
 		fetchMyAPI();
 	}, []);
-
+	const style = {
+		display: 'flex',
+		flexWrap: 'wrap'
+	}
 
 	return (
 		<div className={classes.body}>
 			<NavBar></NavBar>
-			<CustomCard></CustomCard>
-			{datos && datos.map(movie=>(
-				<CustomCard></CustomCard>
-			))}			
+			<p>Top Rated</p>
+			<Container fluid={false}>
+				<Row style={style}>
+					{datos &&
+						datos.map(movie => (
+							<Col xs={6} sm={4} md={3} key={movie.id} >
+								<CustomCard title={movie.original_title} overview={movie.overview} vote_average={movie.vote_average}
+									release_date={movie.release_date} poster_path={movie.poster_path}></CustomCard>
+							</Col>
+						))}
+				</Row>
+			</Container>
 		</div>
 	)
 }
