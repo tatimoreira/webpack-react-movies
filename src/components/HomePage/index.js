@@ -14,7 +14,6 @@ function HomePage() {
 		const response = await fetch(url);
 		const data = await response.json();
 		const item = data.results;
-		debugger
 		setData(item);
 	}
 

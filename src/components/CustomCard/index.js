@@ -5,7 +5,6 @@ import { useStyles } from './style';
 const CustomCard = (props) => {
     console.log(props)
     const classes = useStyles();
-    debugger
     //let data = props.data;
     /* let originalTitle = data.original_title,
         overview = data.overview,

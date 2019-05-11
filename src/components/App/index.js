@@ -3,7 +3,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { CssBaseline, CircularProgress } from '@material-ui/core'
 import theme from '../Style/Theme'
 import HomePage from '../HomePage'
-import Login from '../LoginModal/LoginModal'
+import Login from '../LoginModal'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 export default function App() {

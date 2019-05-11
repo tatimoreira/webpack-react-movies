@@ -3,16 +3,26 @@ import indigo from '@material-ui/core/colors/indigo';
 import { ThemeProvider, useTheme } from '@material-ui/styles';
 
 export default createMuiTheme({
+
   palette: {
+    type: "dark",
     primary: {
-      main: '#2B2C3B',
+      light: '#63ccff',
+      main: '#2B2C3C',
+      dark: '#006db3',
+      accent: 'white',
     },
-    secondary: indigo 
+    secondary:{
+      main: '#2E74C4',
+    },
+    textPrimary:{
+      main: 'white',
+    },
   },
   typography: {
+    fontFamily: "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
     fontSize: 20,
-    color: 'white',
-    useNextVariants: true,
+    color: 'red',
   },
   overrides: {
     MuiButton: {
@@ -24,7 +34,7 @@ export default createMuiTheme({
     },
     MuiDialog : {
       paper: {
-        backgroundColor: '#2B2C3B',
+        backgroundColor: '#2B2C3C',
       }
     },
     MuiFormControl: {

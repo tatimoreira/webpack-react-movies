@@ -4,9 +4,6 @@ export const useStyles = makeStyles({
     body: {
         backgroundColor :   '#3E3F52'
     },
-    title: {
-        color:'white',
-    },
     container:{
         padding: '20px',
         fontSize: '32px'
