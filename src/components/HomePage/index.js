@@ -20,6 +20,7 @@ function HomePage() {
 	useEffect(() => {
 		fetchMyAPI();
 	}, []);
+	
 	const style = {
 		display: 'flex',
 		flexWrap: 'wrap'
